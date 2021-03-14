@@ -1,0 +1,14 @@
+{
+  "name": "hexo-magnet",
+  "version": "1.0.6",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ice Kano",
+  "license": "MIT",
+  "__npminstall_done": "Sat Mar 13 2021 23:38:24 GMT+0800 (中国标准时间)",
+  "_from": "hexo-magnet@1.0.0",
+  "_resolved": "https://registry.npmjs.org/hexo-magnet/-/hexo-magnet-1.0.0.tgz"
+}
