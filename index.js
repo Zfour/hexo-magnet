@@ -86,7 +86,7 @@ hexo.extend.filter.register('after_generate',function() {
     console.log('已挂载magnet')
     parent.insertAdjacentHTML("afterbegin",child)}
      </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(${devide}% - 5px);background: ${hexo.config.magnet.color_setting.background_color};margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: ${hexo.config.magnet.color_setting.background_hover_color}}.magnet_link_more{color:#555}.magnet_link{color:${hexo.config.magnet.color_setting.text_color}}.magnet_link:hover{color:${hexo.config.magnet.color_setting.text_hover_color}}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
-    `;
+    <style>${hexo.config.magnet.plus_style}</style>`;
         hexo.extend.injector.register('body_end',script_text, "default");
     }
 
