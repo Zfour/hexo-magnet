@@ -58,6 +58,7 @@ hexo.extend.filter.register('after_generate',function() {
                         var item_group = {}
                         item_group[item.name]=item.length
                         categories_new_list.push(item_group)
+                        if(j.icon===null){j.icon = ""}
                         temple_html_item += `<div class="magnet_item"><a class="magnet_link" href="${item.path}"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">${j.icon} ${j.display_name}${br_devide}(${item.length})</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div>`;
                     }
                 }
