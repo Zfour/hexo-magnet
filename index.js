@@ -34,14 +34,11 @@ hexo.extend.filter.register('after_generate',function() {
         }
         var data_list =[]
         var load_more_href = ''
-        var categories_list= hexo.locals.get('categories').data;
-        var tag_list = hexo.locals.get('tags').data;
-        if(hexo.config.magnet.type ==='categories'){
-            data_list = categories_list
-            load_more_href = hexo.config.url + hexo.config.magnet.categories_dir // 自定义目录的修改
-        }else if (hexo.config.magnet.type ==='tags'){
-            data_list = tag_list
-            load_more_href = '/tags'
+        data_list = hexo.locals.get(hexo.config.magnet.type).data;
+        if (hexo.config.magnet.more_href){
+            load_more_href = hexo.config.magnet.more_href  // 不加hexo.config.url 方便本地调试
+        }else{
+            load_more_href = `/${hexo.config.magnet.type}/` // e.g '/tags/' or '/categories/'
         }
         var categories_new_list = [];
         var temple_html_item = '';
